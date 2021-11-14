@@ -1,0 +1,7 @@
+<div *ngFor="let starship of starShipsList">
+    <p> {{ starship.name }} </p>
+    <p> {{ starship.model }} </p>
+</div>
+
+
+<button *ngIf="starShipsData.next" (click)="getNextPage()">View more</button>
