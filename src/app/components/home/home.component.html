@@ -1,6 +1,8 @@
 <div *ngFor="let starship of starShipsList">
-    <p> {{ starship.name }} </p>
-    <p> {{ starship.model }} </p>
+    <div (click)="goToDetail(starship.url)">
+        <p> {{ starship.name }} </p>
+        <p> {{ starship.model }} </p>
+    </div>
 </div>
 
 

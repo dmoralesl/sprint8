@@ -6,11 +6,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CustomInterceptor } from './interceptors';
 import { HomeComponent } from './components/home/home.component';
 import { NgModule } from '@angular/core';
+import { DetailComponent } from './components/detail/detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    DetailComponent,
   ],
   imports: [
     BrowserModule,

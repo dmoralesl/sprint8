@@ -17,4 +17,9 @@ export class DataService {
       params: { page: page.toString() }
     });
   }
+
+  getStarship(id: number): Observable<any> {
+    console.log('Starship ID:', id)
+    return this.http.get(env.apiUrl + 'starships/' + id);
+  }
 }
