@@ -4,9 +4,10 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { CustomInterceptor } from './interceptors';
-import { HomeComponent } from './components/home/home.component';
-import { NgModule } from '@angular/core';
 import { DetailComponent } from './components/detail/detail.component';
+import { HomeComponent } from './components/home/home.component';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { NgModule } from '@angular/core';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { DetailComponent } from './components/detail/detail.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    InfiniteScrollModule
     ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: CustomInterceptor, multi: true }

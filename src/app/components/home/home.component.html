@@ -1,9 +1,8 @@
-<div *ngFor="let starship of starShipsList">
-    <div (click)="goToDetail(starship.url)">
-        <p> {{ starship.name }} </p>
-        <p> {{ starship.model }} </p>
+<div infiniteScroll (scrolled)="getNextPage()">
+    <div *ngFor="let starship of starShipsList" class="starship-overview">
+        <div (click)="goToDetail(starship.url)">
+            <p> {{ starship.name }} </p>
+            <p> {{ starship.model }} </p>
+        </div>
     </div>
 </div>
-
-
-<button *ngIf="starShipsData.next" (click)="getNextPage()">View more</button>

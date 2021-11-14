@@ -31,6 +31,9 @@ export class HomeComponent implements OnInit {
   }
 
   getNextPage() {
+    // Guard clause to avoid getting new data if there is no next page
+    if (!this.starShipsData.next) { return; }
+
     this.currentDataPage++;
     this.dataService.getStarships(this.currentDataPage).subscribe((data: any) => {
       this.starShipsData = { 
