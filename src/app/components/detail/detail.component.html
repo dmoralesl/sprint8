@@ -1,6 +1,11 @@
-<div>  
+<div class="detail-wrapper">  
+    <img 
+    src="https://starwars-visualguide.com/assets/img/starships/{{id}}.jpg" 
+    alt="Starship image"
+    onerror="this.src='https:\/\/starwars-visualguide.com/assets/img/big-placeholder.jpg'"
+    >
     <h2>{{ starshipData.name }}</h2>
-    <p>{{ starshipData.description }}</p>
+    <p>{{ description }}</p>
     <div class="starship-detail-grid">
         <span>Model: {{ starshipData.model }}</span>
         <span>Manufacturer: {{ starshipData.manufacturer }}</span>

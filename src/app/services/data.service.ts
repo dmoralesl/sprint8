@@ -22,4 +22,8 @@ export class DataService {
     console.log('Starship ID:', id)
     return this.http.get(env.apiUrl + 'starships/' + id);
   }
+
+  getFilm(id: number): Observable<any> {
+    return this.http.get(env.apiUrl + 'films/' + id);
+  }
 }

@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+@import "styles/variables";
+
+body {
+    background-color: $black-bg;
+    color: $white-light;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 2px;
+}

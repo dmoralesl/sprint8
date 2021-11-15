@@ -5,15 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { CustomInterceptor } from './interceptors';
 import { DetailComponent } from './components/detail/detail.component';
-import { HomeComponent } from './components/home/home.component';
+import { HeaderComponent } from './components/header/header.component';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { NgModule } from '@angular/core';
+import { StarshipsComponent } from './components/starships/starships.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
+    StarshipsComponent,
     DetailComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,

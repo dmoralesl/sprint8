@@ -1,11 +1,11 @@
 import { RouterModule, Routes } from '@angular/router';
 
 import { DetailComponent } from './components/detail/detail.component';
-import { HomeComponent } from './components/home/home.component';
 import { NgModule } from '@angular/core';
+import { StarshipsComponent } from './components/starships/starships.component';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent, pathMatch: 'full'},
+  {path: 'starships', component: StarshipsComponent, pathMatch: 'full'},
   {path: 'starship/:id', component: DetailComponent }
 ];
 

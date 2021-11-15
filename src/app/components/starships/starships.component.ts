@@ -4,11 +4,11 @@ import { DataService } from '../../services/data.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-starships',
+  templateUrl: './starships.component.html',
+  styleUrls: ['./starships.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class StarshipsComponent implements OnInit {
 
   constructor(
     private dataService: DataService,
@@ -20,7 +20,6 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.dataService.getStarships(this.currentDataPage).subscribe((data: any) => {
-      console.log(data);
       this.starShipsData = { 
         count: data.count,
         next: data.next,
@@ -52,8 +51,7 @@ export class HomeComponent implements OnInit {
     const idInUrl: RegExpMatchArray | null = url.match(/\/[000-999]\/$/);
     if (idInUrl) {
       const id: number = parseInt(idInUrl[0].replace('/', ''));
-      this.router.navigate(['/starship/', id])
+      this.router.navigate(['/starship/', id]);
     }
   }
-
 }
