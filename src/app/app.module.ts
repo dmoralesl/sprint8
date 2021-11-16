@@ -9,6 +9,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { NgModule } from '@angular/core';
 import { StarshipsComponent } from './components/starships/starships.component';
+import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
+import { SignupComponent } from './components/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +19,9 @@ import { StarshipsComponent } from './components/starships/starships.component';
     StarshipsComponent,
     DetailComponent,
     HeaderComponent,
+    HomeComponent,
+    LoginComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,44 +1,48 @@
 @import "../../../styles/variables";
+@import "../../../styles/galaxy";
 
 ul {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    border-top: .5px solid $white-lighter;
-    border-bottom: .5px solid $white-lighter;
-    text-align: center;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-top: 0.5px solid $white-lighter;
+  border-bottom: 0.5px solid $white-lighter;
+  text-align: center;
 
+  li {
+    padding: 1rem;
+    cursor: pointer;
+    border-left: 0.5px solid $white-lighter;
+  }
 
-    li {
-        padding: 1rem;
-        cursor: pointer;
-        border-left: .5px solid $white-lighter;
-    }
-
-    li:last-child {
-        border-right: .5px solid $white-lighter;
-    }
+  li:last-child {
+    border-right: 0.5px solid $white-lighter;
+  }
 }
 
 .upper-header {
-    position: relative;
-    text-align: center;
-    padding: 1rem;
-    margin-top: .5rem;
+  position: relative;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
 
-    div {
-        position: absolute;
-        right: 1rem;
-        top: 40%;
-    }
+  div {
+    position: absolute;
+    right: 1rem;
+    top: 40%;
+  }
 
-    img {
-        max-width: min(25%, 225px);
-        fill: white;
-    }
+  img {
+    max-width: min(25%, 225px);
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .is-active {
-    border-bottom: 2px solid #106BE0;
+  border-bottom: 2px solid #106be0;
 }
+

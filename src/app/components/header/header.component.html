@@ -1,4 +1,12 @@
+
+
 <div class="upper-header">
+    <section >
+        <div class="galaxy">
+           <div class="stars">
+           </div>
+       </div>
+    </section>
     <img src="../../../assets/images/sw-logo.png" alt="Star Wars logo">
     <div>
         <span>LOG IN</span>
@@ -8,7 +16,11 @@
 </div>
 <div>
     <ul>
-        <li>HOME</li>
-        <li [routerLink]="['/starships']" routerLinkActive="is-active">STARSHIPS</li>
+        <li [routerLink]="['']" routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}">
+            HOME
+        </li>
+        <li [routerLink]="['/starships']" routerLinkActive="is-active">
+            STARSHIPS
+        </li>
     </ul>
 </div>
