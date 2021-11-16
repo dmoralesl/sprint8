@@ -55,6 +55,5 @@ export class AuthService {
     this.isLoggedIn = true;
     window.localStorage.setItem('isLoggedIn', JSON.stringify(this.isLoggedIn));
   }
-
-
 }
+
