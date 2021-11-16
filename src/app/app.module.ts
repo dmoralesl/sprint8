@@ -13,6 +13,7 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SignupComponent } from './components/signup/signup.component';
 import { StarshipsComponent } from './components/starships/starships.component';
+import { PilotComponent } from './components/pilot/pilot.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { StarshipsComponent } from './components/starships/starships.component';
     HomeComponent,
     LoginComponent,
     SignupComponent,
+    PilotComponent,
   ],
   imports: [
     BrowserModule,

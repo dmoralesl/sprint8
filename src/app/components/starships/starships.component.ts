@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { DataService } from '../../services/data.service';
 import { Router } from '@angular/router';
+import { getIdFromUrl } from '../../helpers';
 
 @Component({
   selector: 'app-starships',
@@ -47,11 +48,9 @@ export class StarshipsComponent implements OnInit {
   // For performance reasons, it will better to had detail of child of component and pass starship data
   // with input directive. But for learning purpose we are using router to navigate with dynamic parameters in the url
   goToDetail(url: string) {
-    console.log(url);
-    const idInUrl: RegExpMatchArray | null = url.match(/\/[000-999]\/$/);
+    const idInUrl = getIdFromUrl(url);
     if (idInUrl) {
-      const id: number = parseInt(idInUrl[0].replace('/', ''));
-      this.router.navigate(['/starship/', id]);
+      this.router.navigate(['/starship/', idInUrl]);
     }
   }
 }

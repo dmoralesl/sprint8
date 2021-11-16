@@ -26,4 +26,8 @@ export class DataService {
   getFilm(id: number): Observable<any> {
     return this.http.get(env.apiUrl + 'films/' + id);
   }
+
+  getCharacter(id: number): Observable<any> {
+    return this.http.get(env.apiUrl + 'people/' + id);
+  }
 }

@@ -1,0 +1,7 @@
+<div>
+    <h4>{{ character.name }}</h4>
+    <span>Height: {{ character.height }}</span>
+    <span>Mass: {{ character.mass }}</span>
+    <span [style.textTransform]="'capitalize'">Gender: {{ character.gender }}</span>
+</div>
+<img src="https://starwars-visualguide.com/assets/img/characters/{{pilotId}}.jpg"  alt="Profile image of {{character.name}}">

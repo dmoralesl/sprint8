@@ -34,3 +34,11 @@ p {
         padding: 1rem 1rem 1rem 0;
     }
 }
+
+.pilots {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 3rem;
+    gap: 3.5rem;
+}

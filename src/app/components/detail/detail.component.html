@@ -16,4 +16,13 @@
 
     </div>
 
+    <div *ngIf="starshipData.pilots.length">
+        <h2 [style.textAlign]="'center'">PILOTS</h2>
+        <div class="pilots">
+            <app-pilot *ngFor="let pilot of starshipData.pilots" [pilotUrl]="pilot">
+                
+            </app-pilot>
+        </div>
+    </div>
+
 </div>
