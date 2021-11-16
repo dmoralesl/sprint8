@@ -1,1 +1,6 @@
-<p>login works!</p>
+<form [formGroup]="loginForm" #form="ngForm" (ngSubmit)="login()">
+    <input type="text" formControlName="user" #user placeholder="Username">
+    <input type="password" formControlName="password" #password placeholder="Password">
+    <p *ngIf="!logged && form.submitted" class=validation-error>User or password not correct</p>
+    <button class="primary-button" type="submit" [disabled]="!loginForm.valid">Login</button>
+</form>

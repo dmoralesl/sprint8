@@ -1,22 +1,6 @@
 @import "../../../styles/variables";
 
-button {
-    padding: 1rem 2rem;
-    margin: auto; 
-    cursor: pointer;
-    color: $white-light;
-    border: 2px solid $white-light;
-    background-color: $black-bg;
-    border-radius: .5rem;
-    position: fixed;
-    bottom: 5rem;
-}   
 
-button:hover {
-    transform: scale(1.1);
-    background-color: $white-light;
-    color: $black-light-bg;
-}
 
 div:last-child {
     display: flex;
@@ -30,7 +14,7 @@ width: 100%;
 height: 100%;
 font-family: "Droid Sans", arial, verdana, sans-serif;
 font-weight: 700;
-color: #EBD71C;
+color: $yellow-sw;
 overflow: hidden;
 position: relative;
 

@@ -5,4 +5,30 @@ body {
     color: $white-light;
     font-family: 'Courier New', Courier, monospace;
     letter-spacing: 2px;
+    display: flex;
+    flex-direction: column;
+    height: 97vh;
+}
+
+.primary-button {
+
+    padding: 1rem 2rem;
+    margin: auto; 
+    cursor: pointer;
+    color: $white-light;
+    border: 2px solid $white-light;
+    background-color: $black-bg;
+    border-radius: .5rem;
+    
+    &:hover:not(:disabled) {
+        transform: scale(1.1);
+        background-color: $white-light;
+        color: $black-light-bg;
+    }
+
+    &:disabled {
+        background-color: $black-light-bg;
+        cursor: unset;
+        opacity: .3;
+    }
 }

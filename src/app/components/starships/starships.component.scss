@@ -1,4 +1,5 @@
 @import "../../../styles/variables";
+@import "../../../styles/mixins";
 
 .starships-wrapper {
     display: flex;
@@ -22,7 +23,6 @@
     }
 
     &:hover {
-        transform: scale(1.05);
-        box-shadow: 0 0 11px $white-lighter; 
+        @include border-light(11px);
     }
 }
