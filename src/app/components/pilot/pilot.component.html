@@ -1,9 +1,9 @@
 <div>
-    <h4>{{ character.name }}</h4>
+    <h4>{{ character?.name }}</h4>
     <div>
-        <span><span class="card-attribute">Height</span> → {{ character.height }}</span>
-        <span><span class="card-attribute">Mass</span> → {{ character.mass }}</span>
-        <span><span class="card-attribute" [style.textTransform]="'capitalize'">Gender</span> → {{ character.gender }}</span>
+        <span><span class="card-attribute">Height</span> → {{ character?.height }}</span>
+        <span><span class="card-attribute">Mass</span> → {{ character?.mass }}</span>
+        <span><span class="card-attribute" [style.textTransform]="'capitalize'">Gender</span> → {{ character?.gender }}</span>
     </div>
 </div>
-<img src="https://starwars-visualguide.com/assets/img/characters/{{pilotId}}.jpg"  alt="Profile image of {{character.name}}">
+<img src="https://starwars-visualguide.com/assets/img/characters/{{pilotId}}.jpg"  alt="Profile image of {{character?.name}}">

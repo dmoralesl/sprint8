@@ -1,9 +1,9 @@
 <div>
-    <h4>{{ film.title }}</h4>
+    <h4>{{ film?.title }}</h4>
     <div>
-        <span><span class="card-attribute">Director</span> → {{ film.director }}</span>
-        <span><span class="card-attribute">Release</span> → {{ film.release_date }}</span>
-        <span><span class="card-attribute">Producer</span> → {{ film.producer }}</span>
+        <span><span class="card-attribute">Director</span> → {{ film?.director }}</span>
+        <span><span class="card-attribute">Release</span> → {{ film?.release_date }}</span>
+        <span><span class="card-attribute">Producer</span> → {{ film?.producer }}</span>
     </div>
 </div>
-<img src="https://starwars-visualguide.com/assets/img/films/{{filmId}}.jpg"  alt="Preview of the film {{film.title}}">
+<img src="https://starwars-visualguide.com/assets/img/films/{{filmId}}.jpg"  alt="Preview of the film {{film?.title}}">

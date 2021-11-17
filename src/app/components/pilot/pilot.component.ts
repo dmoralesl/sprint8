@@ -19,7 +19,6 @@ export class PilotComponent implements OnInit {
   ngOnInit(): void {
     // Guard clause to not perfom requests if pilotUrl is empty
     if (!this.pilotUrl) { return; }
-  
     this.pilotId = getIdFromUrl(this.pilotUrl);
     // If url is provided but has not a valid format, getIdFromUrl will return null and 
     // we could not perfomr the request

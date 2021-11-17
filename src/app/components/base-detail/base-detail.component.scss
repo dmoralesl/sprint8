@@ -1,5 +1,11 @@
 @import "../../../styles/variables";
 
+hr {
+    opacity: .5;
+    width: 70%;
+    margin: 5rem auto;
+}
+
 img { 
     width: 100%;
     border-bottom: 3px solid #6F3945;
@@ -10,6 +16,7 @@ img {
 h2 { 
     text-transform: uppercase;
     padding: 1rem 0;
+    text-align: center;
 }
 
 p { 
@@ -50,6 +57,11 @@ p {
 .character-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
+
+    img {
+        max-width: 400px;
+        margin-right: 2rem;
+    }
 }
 
 @media screen and (max-width: $breakpoint-mobile) {
@@ -60,4 +72,4 @@ p {
         grid-template-columns: 1fr;
     }
 }
-    
+

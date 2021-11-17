@@ -2,9 +2,13 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { BaseDetailComponent } from './components/base-detail/base-detail.component';
+import { BaseListComponent } from './components/base-list/base-list.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
+import { CharacterComponent } from './components/character/character.component';
+import { CharactersComponent } from './components/characters/characters.component';
 import { CustomInterceptor } from './interceptors';
-import { DetailComponent } from './components/detail/detail.component';
 import { FilmComponent } from './components/film/film.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
@@ -14,17 +18,14 @@ import { NgModule } from '@angular/core';
 import { PilotComponent } from './components/pilot/pilot.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SignupComponent } from './components/signup/signup.component';
+import { StarshipComponent } from './components/starship/starship.component';
 import { StarshipsComponent } from './components/starships/starships.component';
-import { BaseListComponent } from './components/base-list/base-list.component';
-import { CharactersComponent } from './components/characters/characters.component';
-import { BaseDetailComponent } from './components/base-detail/base-detail.component';
-import { CharacterComponent } from './components/character/character.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StarshipsComponent,
-    DetailComponent,
+    StarshipComponent,
     HeaderComponent,
     HomeComponent,
     LoginComponent,
@@ -41,7 +42,8 @@ import { CharacterComponent } from './components/character/character.component';
     AppRoutingModule,
     HttpClientModule,
     InfiniteScrollModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
     ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: CustomInterceptor, multi: true }

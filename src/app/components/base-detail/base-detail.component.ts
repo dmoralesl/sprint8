@@ -29,7 +29,6 @@ export class BaseDetailComponent implements OnInit {
         this.id = parseInt(_id);
         this.dataService.getDataDetail(this.apiEndpoint, this.id).subscribe((data: any) => {
           this.detailData = data;
-
           // Getting random opening crawl from film if it exists for starship
           if (data.films) {
             const filmUrl = data.films[Math.floor(Math.random() * data.films.length)];
