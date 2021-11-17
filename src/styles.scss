@@ -32,3 +32,9 @@ body {
         opacity: .3;
     }
 }
+
+.card-attribute {
+    color: $yellow-sw;
+    text-decoration: underline;
+    text-decoration-color: $white-light;
+}

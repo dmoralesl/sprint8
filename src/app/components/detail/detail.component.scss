@@ -35,10 +35,14 @@ p {
     }
 }
 
-.pilots {
+.cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin: 3rem;
     gap: 3.5rem;
+
+    app-film {
+        width: min(450px, 90vw);
+    }
 }
