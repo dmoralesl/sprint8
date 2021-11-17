@@ -1,0 +1,19 @@
+<div class="detail-wrapper">  
+    <img 
+    src="https://starwars-visualguide.com/assets/img/starships/{{id}}.jpg" 
+    alt="Starship image"
+    onerror="this.src='https:\/\/starwars-visualguide.com/assets/img/big-placeholder.jpg'"
+    >
+    <h2>{{ starshipData.name }}</h2>
+    <p>{{ description }}</p>
+    <div class="starship-detail-grid">
+        <span>Model: {{ starshipData.model }}</span>
+        <span>Manufacturer: {{ starshipData.manufacturer }}</span>
+        <span>Cost in credits: {{ starshipData.cost_in_credits }}</span>
+        <span>Length: {{ starshipData.length }}</span>
+        <span>Atmospheric Speed: {{ starshipData.max_atmosphering_speed }}</span>
+        <span>Crew: {{ starshipData.crew }}</span>
+
+    </div>
+
+</div>

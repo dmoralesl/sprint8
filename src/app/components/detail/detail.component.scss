@@ -1,0 +1,36 @@
+
+img { 
+    width: 100%;
+    border-bottom: 3px solid #6F3945;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h2 { 
+    text-transform: uppercase;
+    padding: 1rem 0;
+}
+
+p { 
+    letter-spacing: normal;
+    padding-bottom: 3rem;
+}
+
+.starship-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.detail-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: auto; 
+}
+
+.starship-detail-grid {
+    gap: .5rem; 
+    span { 
+        padding: 1rem 1rem 1rem 0;
+    }
+}
