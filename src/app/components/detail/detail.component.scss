@@ -1,3 +1,4 @@
+@import "../../../styles/variables";
 
 img { 
     width: 100%;
@@ -46,3 +47,10 @@ p {
         width: min(450px, 90vw);
     }
 }
+
+@media screen and (max-width: $breakpoint-mobile) {
+    .starship-detail-grid {
+        grid-template-columns: 1fr;
+    }
+}
+    

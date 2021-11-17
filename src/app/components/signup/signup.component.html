@@ -1,12 +1,12 @@
 <form [formGroup]="signUpForm" (ngSubmit)="signup()">
     <p *ngIf="userAlreadyExists" class="validation-error">Username already exists</p>
-    <input type="text" formControlName="user" #user placeholder="Username">
-    <div>
+    <input class="input-container" type="text" formControlName="user" #user placeholder="Username">
+    <div class="input-container">
         <p *ngIf="signUpForm.get('email')?.hasError('email') && signUpForm.get('email')?.touched" class="validation-error" >Not valid email format</p>
         <input type="email" formControlName="email" #email placeholder="Email">
     </div>
-    <input type="password" formControlName="password" #password placeholder="Password">
-    <div>
+    <input class="input-container" type="password" formControlName="password" #password placeholder="Password">
+    <div class="input-container">
         <p *ngIf="signUpForm.hasError('notSame') && signUpForm.get('passwordRe')?.touched" class="validation-error" >Passwords have to be equal</p>
         <input type="password" formControlName="passwordRe" #passwordRe placeholder="Repeat password">
     </div>

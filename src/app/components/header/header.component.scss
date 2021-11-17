@@ -40,7 +40,7 @@ ul {
   }
 
   img {
-    max-width: min(25%, 225px);
+    max-width: min(15%, 225px);
     position: absolute;
     top: 1rem;
     left: 50%;
@@ -60,4 +60,31 @@ ul {
   &:hover {
     color: $yellow-sw;
   }
+}
+
+
+@media screen and (max-width: $breakpoint-mobile) {
+    section {
+      height: 2.75rem;
+    }
+
+    .auth-container {
+      bottom: 0;
+      top: unset !important;
+      right: unset !important;
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      width: calc(100% - 2rem);
+
+
+      span {
+        padding: 0;
+      }
+
+      span:nth-child(2) {
+        display: none;
+      }
+    }
+
 }

@@ -35,3 +35,20 @@ form {
         text-align: center;
     }
 }
+
+@media screen and (max-width: $breakpoint-mobile) {
+    
+    .input-container { 
+        width: 75% !important; 
+    }
+    div.input-container { 
+        width: calc(75% + 2.5rem) !important; 
+        text-align: center;
+        input { width: inherit; }
+    }
+    form { 
+        padding: 0; 
+        width: 100%;
+    }
+}
+    
