@@ -1,5 +1,5 @@
-<div infiniteScroll (scrolled)="getNextPage()" class="starships-wrapper">
-    <div *ngFor="let starship of starShipsList" class="starship-overview">
+<div infiniteScroll (scrolled)="getNextPage()" class="list-wrapper">
+    <div *ngFor="let starship of list" class="list-overview">
         <div (click)="goToDetail(starship.url)">
             <h3> {{ starship.name }} </h3>
             <div> {{ starship.model }} </div>

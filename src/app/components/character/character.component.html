@@ -1,0 +1,37 @@
+<div class="detail-wrapper">  
+    <h2>{{ detailData.name }}</h2>
+    <div class="character-wrapper">
+        <img 
+        src="https://starwars-visualguide.com/assets/img/characters/{{id}}.jpg" 
+        alt="Character image"
+        onerror="this.src='https:\/\/starwars-visualguide.com/assets/img/big-placeholder.jpg'"
+        [style.borderRadius]="'1rem'"
+        >
+        <div class="detail-grid" [style]="{alignItems: 'center', gridTemplateColumns: '1fr', marginLeft: '2rem'}">
+            <span><span class="card-attribute">Height</span>→ {{ detailData.height }}</span>
+            <span><span class="card-attribute">Mass</span>→ {{ detailData.mass }}</span>
+            <span><span class="card-attribute">Birth year</span>→ {{ detailData.birth_year }}</span>
+            <span [style.textTransform]="'capitalize'"><span class="card-attribute">Gender</span>→ {{ detailData.gender }}</span>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="detailData.pilots?.length">
+    <br/><br/>
+    <h2 [style.textAlign]="'center'">PILOTS</h2>
+    <div class="cards">
+        <app-pilot *ngFor="let pilot of detailData.pilots" [pilotUrl]="pilot">
+            
+        </app-pilot>
+    </div>
+</div>
+
+<div *ngIf="detailData.films?.length">
+    <br/><br/>
+    <h2 [style.textAlign]="'center'">FILMS</h2>
+    <div class="cards">
+        <app-film *ngFor="let film of detailData.films" [filmUrl]="film">
+            
+        </app-film>
+    </div>
+</div>

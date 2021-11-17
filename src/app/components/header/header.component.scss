@@ -68,6 +68,19 @@ ul {
       height: 2.75rem;
     }
 
+    .upper-header {
+
+      img { max-width: min(25%, 225px) !important; }
+    }
+
+    li { 
+      font-size: smaller; 
+    }
+
+    ul {
+      padding-left: 0;
+    }
+
     .auth-container {
       bottom: 0;
       top: unset !important;

@@ -12,14 +12,17 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
-  getStarships(page: number): Observable<any> {
-    return this.http.get(env.apiUrl + 'starships', {
+  getDataList(endpoint: string, page: number): Observable<any> {
+    return this.http.get(env.apiUrl + endpoint, {
       params: { page: page.toString() }
     });
   }
+  
+  getDataDetail(endpoint: string, id: number): Observable<any> {
+    return this.http.get(env.apiUrl + endpoint + '/' + id);
+  }
 
   getStarship(id: number): Observable<any> {
-    console.log('Starship ID:', id)
     return this.http.get(env.apiUrl + 'starships/' + id);
   }
 
@@ -31,3 +34,5 @@ export class DataService {
     return this.http.get(env.apiUrl + 'people/' + id);
   }
 }
+
+

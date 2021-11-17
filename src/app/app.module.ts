@@ -15,6 +15,10 @@ import { PilotComponent } from './components/pilot/pilot.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SignupComponent } from './components/signup/signup.component';
 import { StarshipsComponent } from './components/starships/starships.component';
+import { BaseListComponent } from './components/base-list/base-list.component';
+import { CharactersComponent } from './components/characters/characters.component';
+import { BaseDetailComponent } from './components/base-detail/base-detail.component';
+import { CharacterComponent } from './components/character/character.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +31,10 @@ import { StarshipsComponent } from './components/starships/starships.component';
     SignupComponent,
     PilotComponent,
     FilmComponent,
+    BaseListComponent,
+    CharactersComponent,
+    BaseDetailComponent,
+    CharacterComponent,
   ],
   imports: [
     BrowserModule,

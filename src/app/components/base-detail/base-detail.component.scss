@@ -1,0 +1,63 @@
+@import "../../../styles/variables";
+
+img { 
+    width: 100%;
+    border-bottom: 3px solid #6F3945;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h2 { 
+    text-transform: uppercase;
+    padding: 1rem 0;
+}
+
+p { 
+    letter-spacing: normal;
+    padding-bottom: 3rem;
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .5rem; 
+
+    span { 
+        padding: 1rem 1rem 1rem 0;
+    }
+}
+
+.detail-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: auto; 
+}
+
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 3rem;
+    gap: 3.5rem;
+
+    app-film {
+        width: min(450px, 90vw);
+    }
+}
+
+.character-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+    .detail-grid {
+        grid-template-columns: 1fr;
+    }
+    .character-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+    

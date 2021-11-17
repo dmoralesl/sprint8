@@ -4,34 +4,24 @@
     alt="Starship image"
     onerror="this.src='https:\/\/starwars-visualguide.com/assets/img/big-placeholder.jpg'"
     >
-    <h2>{{ starshipData.name }}</h2>
+    <h2>{{ detailData.name }}</h2>
     <p>{{ description }}</p>
-    <div class="starship-detail-grid">
-        <span><span class="card-attribute">Model</span>→ {{ starshipData.model }}</span>
-        <span><span class="card-attribute">Manufacturer</span>→ {{ starshipData.manufacturer }}</span>
-        <span><span class="card-attribute">Cost in credits</span>→ {{ starshipData.cost_in_credits }}</span>
-        <span><span class="card-attribute">Length</span>→ {{ starshipData.length }}</span>
-        <span><span class="card-attribute">Atmospheric</span>→ {{ starshipData.max_atmosphering_speed }}</span>
-        <span><span class="card-attribute">Crew</span>→ {{ starshipData.crew }}</span>
-
+    <div class="detail-grid">
+        <span><span class="card-attribute">Model</span>→ {{ detailData.model }}</span>
+        <span><span class="card-attribute">Manufacturer</span>→ {{ detailData.manufacturer }}</span>
+        <span><span class="card-attribute">Cost in credits</span>→ {{ detailData.cost_in_credits }}</span>
+        <span><span class="card-attribute">Length</span>→ {{ detailData.length }}</span>
+        <span><span class="card-attribute">Atmospheric</span>→ {{ detailData.max_atmosphering_speed }}</span>
+        <span><span class="card-attribute">Crew</span>→ {{ detailData.crew }}</span>
     </div>
+    <br/><br/>
+
 </div>
 
-<div *ngIf="starshipData.pilots.length">
-    <br/><br/>
-    <h2 [style.textAlign]="'center'">PILOTS</h2>
-    <div class="cards">
-        <app-pilot *ngFor="let pilot of starshipData.pilots" [pilotUrl]="pilot">
-            
-        </app-pilot>
-    </div>
-</div>
-
-<div *ngIf="starshipData.films.length">
-    <br/><br/>
+<div *ngIf="detailData.films?.length">
     <h2 [style.textAlign]="'center'">FILMS</h2>
     <div class="cards">
-        <app-film *ngFor="let film of starshipData.films" [filmUrl]="film">
+        <app-film *ngFor="let film of detailData.films" [filmUrl]="film">
             
         </app-film>
     </div>

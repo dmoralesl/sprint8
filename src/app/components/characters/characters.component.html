@@ -1,0 +1,8 @@
+<div infiniteScroll (scrolled)="getNextPage()" class="list-wrapper">
+    <div *ngFor="let character of list" class="list-overview">
+        <div (click)="goToDetail(character.url)">
+            <h3> {{ character.name }} </h3>
+            <div> {{ character.birth_year !== 'unknown' ?  character.birth_year : 'No birth date'}} </div>
+        </div>
+    </div>
+</div>
