@@ -1,0 +1,38 @@
+<div class="detail-wrapper">  
+    <img 
+    src="https://starwars-visualguide.com/assets/img/starships/{{id}}.jpg" 
+    alt="Starship image"
+    onerror="this.src='https:\/\/starwars-visualguide.com/assets/img/big-placeholder.jpg'"
+    >
+    <h2>{{ starshipData.name }}</h2>
+    <p>{{ description }}</p>
+    <div class="starship-detail-grid">
+        <span><span class="card-attribute">Model</span>→ {{ starshipData.model }}</span>
+        <span><span class="card-attribute">Manufacturer</span>→ {{ starshipData.manufacturer }}</span>
+        <span><span class="card-attribute">Cost in credits</span>→ {{ starshipData.cost_in_credits }}</span>
+        <span><span class="card-attribute">Length</span>→ {{ starshipData.length }}</span>
+        <span><span class="card-attribute">Atmospheric</span>→ {{ starshipData.max_atmosphering_speed }}</span>
+        <span><span class="card-attribute">Crew</span>→ {{ starshipData.crew }}</span>
+
+    </div>
+</div>
+
+<div *ngIf="starshipData.pilots.length">
+    <br/><br/>
+    <h2 [style.textAlign]="'center'">PILOTS</h2>
+    <div class="cards">
+        <app-pilot *ngFor="let pilot of starshipData.pilots" [pilotUrl]="pilot">
+            
+        </app-pilot>
+    </div>
+</div>
+
+<div *ngIf="starshipData.films.length">
+    <br/><br/>
+    <h2 [style.textAlign]="'center'">FILMS</h2>
+    <div class="cards">
+        <app-film *ngFor="let film of starshipData.films" [filmUrl]="film">
+            
+        </app-film>
+    </div>
+</div>

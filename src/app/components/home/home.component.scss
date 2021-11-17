@@ -1,0 +1,144 @@
+@import "../../../styles/variables";
+
+
+
+div:last-child {
+    display: flex;
+    justify-content: center;
+}
+
+h3 { text-align: center;}
+
+.star-wars-intro {
+    width: 100%;
+    // height: 100%;
+    font-family: "Droid Sans", arial, verdana, sans-serif;
+    font-weight: 700;
+    color: $yellow-sw;
+    overflow: hidden;
+    position: relative;
+
+p.intro-text {
+    position: relative;
+    max-width: 16em;
+    font-size: 200%;
+    font-weight: 400;
+    margin: 20% auto;
+    color: #4ee;
+    opacity: 0;
+    z-index: 1;
+    text-align: center;
+    -webkit-animation: intro 2s ease-out;
+    -moz-animation: intro 2s ease-out;
+    -ms-animation: intro 2s ease-out;
+    -o-animation: intro 2s ease-out;
+    animation: intro 2s ease-out;
+    }
+    
+.main-content{
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    z-index: 3;
+    width: 98%;
+    height: 60em;
+    bottom: 2rem;
+    font-size: 5rem;
+    font-weight: bold;
+    text-align: justify;
+    line-height: 7.5rem;
+    overflow: hidden;
+    transform-origin: 50% 100%;
+    transform: perspective(350px) rotateX(25deg);
+
+    &:after {
+        position: absolute;
+        content: ' ';
+        top: 0;
+        bottom: 60%;
+        background-image: linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+        pointer-events: none;
+    }
+}
+
+
+
+    .title-content {
+    position: absolute;
+    top: 100%;
+    animation: scroll 120s linear 4s forwards;
+    display: flex;
+    flex-direction: column;
+
+    & .content-header {
+        text-align: center;
+        }
+}
+
+}
+
+
+@-webkit-keyframes intro {
+    0% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@-moz-keyframes intro {
+    0% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@-ms-keyframes intro {
+    0% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@-o-keyframes intro {
+    0% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes intro {
+    0% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+
+@keyframes scroll {
+    0% { top: 100%; }
+    100% { top: -170%; }
+}
+
+@media screen and (max-width: 720px) {
+.star-wars-intro .main-content {
+    font-size: 2.2rem;
+}
+.star-wars-intro .title-content {
+    position: absolute;
+    top: 100%;
+    animation: scroll 100s linear 4s forwards;
+}
+}
+
+
+@media screen and (max-width: $breakpoint-mobile) {
+    .star-wars-intro, :host {
+        height: 65%;
+    }
+
+    .main-content {
+        line-height: 3rem !important;
+    }
+}
+
+@media screen and (min-width: $breakpoint-large-screen) {
+    .star-wars-intro, :host {
+        height: 75%;
+    }
+
+}
