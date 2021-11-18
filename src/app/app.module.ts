@@ -1,5 +1,3 @@
-import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BaseDetailComponent } from './components/base-detail/base-detail.component';
@@ -12,6 +10,7 @@ import { CustomInterceptor } from './interceptors';
 import { FilmComponent } from './components/film/film.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
+import { HttpClientModule } from '@angular/common/http';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { LoginComponent } from './components/login/login.component';
 import { NgModule } from '@angular/core';
@@ -45,9 +44,7 @@ import { StarshipsComponent } from './components/starships/starships.component';
     ReactiveFormsModule,
     BrowserAnimationsModule
     ],
-  providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: CustomInterceptor, multi: true }
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
