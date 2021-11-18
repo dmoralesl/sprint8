@@ -2,6 +2,7 @@ import { AbstractControl, FormControl, FormGroup, ValidationErrors, ValidatorFn,
 import { Component, OnInit } from '@angular/core';
 
 import { AuthService } from 'src/app/services/auth.service';
+import { Router } from '@angular/router';
 import { User } from 'src/app/models/User';
 
 @Component({
@@ -14,7 +15,8 @@ export class SignupComponent implements OnInit {
   userAlreadyExists: boolean = false;
 
   constructor(
-    private authService: AuthService
+    private authService: AuthService,
+    private router: Router
   ) { }
 
   checkPasswords: ValidatorFn = (group: AbstractControl):  ValidationErrors | null => { 
@@ -42,5 +44,6 @@ export class SignupComponent implements OnInit {
     }
     this.userAlreadyExists = this.authService.userIsRegistered(user.name);
     this.authService.setUser(user);
+    this.router.navigate(['/login']);
   }
 }
